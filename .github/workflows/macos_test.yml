@@ -1,4 +1,4 @@
-name: openscad-install 
+name: macos_test 
 
 on:
   workflow_dispatch
