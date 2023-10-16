@@ -1,5 +1,8 @@
 name: windows-test
 
+on:
+  workflow_dispatch
+
 jobs:
   install-windows:
     runs-on: windows-latest
