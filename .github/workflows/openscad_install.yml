@@ -1,0 +1,12 @@
+name: openscad-install 
+
+on:
+  workflow_dispatch
+
+jobs:
+  install-macos:
+    runs-on: macos-latest
+    steps:
+      - name: Install OpenSCAD
+        run: brew install openscad
+
