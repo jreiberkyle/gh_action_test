@@ -7,6 +7,24 @@ jobs:
   install-macos:
     runs-on: macos-latest
     steps:
-      - name: Install OpenSCAD
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.8
+
+      - name: Pip cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip
+          restore-keys: |
+            ${{ runner.os }}-pip
+
+      - name: Download and Install OpenSCAD
         run: brew install openscad
+
+      - name: Run
+        run: |
+          pip install --upgrade jupyterscad
+          python -c "from jupyterscad import render_stl; render_stl('cube([3,3,3]);', 'output.stl')"
 
