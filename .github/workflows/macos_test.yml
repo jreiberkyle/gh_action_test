@@ -25,6 +25,6 @@ jobs:
 
       - name: Run
         run: |
-          pip install --upgrade jupyterscad
-          python -c "from jupyterscad import render_stl; render_stl('cube([3,3,3]);', 'output.stl')"
+          pip install --quiet --upgrade jupyterscad
+          python -c "from jupyterscad import render_stl; render_stl('cube([3,3,3]);', 'output.stl'); print('success')"
 
