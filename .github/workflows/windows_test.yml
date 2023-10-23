@@ -7,11 +7,5 @@ jobs:
   install-windows:
     runs-on: windows-latest
     steps:
-      - name: Download and Install OpenSCAD
-        shell: pwsh
-        run: |
-          (New-Object System.Net.WebClient).DownloadFile('https://files.openscad.org/OpenSCAD-2021.01-x86-32-Installer.exe', 'OpenSCAD-2021.01-x86-32-Installer.exe')
-          .\OpenSCAD-2021.01-x86-32-Installer.exe
-
       - name: find openscad
-        run: dir
+        run: cd C:\Program Files
