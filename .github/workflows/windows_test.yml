@@ -19,4 +19,4 @@ jobs:
           python-version: 3.8
 
       - name: Find OpenSCAD
-        run: python -c "from shutil import which; print(which('C:\\Program Files\\OpenSCAD\\openscad.exe'))"
+        run: python -c "from shutil import which; print(which('openscad', path=r'C:\Program Files\OpenSCAD'))"
