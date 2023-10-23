@@ -7,5 +7,16 @@ jobs:
   install-windows:
     runs-on: windows-latest
     steps:
-      - name: find openscad
-        run: cd C:\Program Files
+      - name: Download and Install OpenSCAD
+        shell: pwsh
+        run: |
+          (New-Object System.Net.WebClient).DownloadFile('https://files.openscad.org/OpenSCAD-2021.01-x86-32-Installer.exe', 'OpenSCAD-2021.01-x86-32-Installer.exe')
+          .\OpenSCAD-2021.01-x86-32-Installer.exe
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.8
+
+      - name: Find OpenSCAD
+        run: python -c "from shutil import which; print(which('C:\\Program Files\\OpenSCAD\\openscad.exe'))"
