@@ -22,5 +22,5 @@ jobs:
         run: pip install --quiet --upgrade jupyterscad
 
       - name: Run
-        run: python -c "from shutil import which; print(which('openscad'));"
+        run: python -c "from shutil import which; print(which('openscad.exe'));"
 
