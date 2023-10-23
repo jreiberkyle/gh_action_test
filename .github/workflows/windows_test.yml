@@ -13,5 +13,5 @@ jobs:
           (New-Object System.Net.WebClient).DownloadFile('https://files.openscad.org/OpenSCAD-2021.01-x86-32-Installer.exe', 'OpenSCAD-2021.01-x86-32-Installer.exe')
           .\OpenSCAD-2021.01-x86-32-Installer.exe
 
-     - name: find openscad
-       run: dir
+      - name: find openscad
+        run: dir
