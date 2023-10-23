@@ -19,8 +19,10 @@ jobs:
           .\OpenSCAD-2021.01-x86-32-Installer.exe
 
       - name: Install jupyterscad
+        shell: pwsh
         run: pip install --quiet --upgrade jupyterscad
 
       - name: Run
+        shell: pwsh
         run: python -c "from shutil import which; print(which('openscad.exe'));"
 
