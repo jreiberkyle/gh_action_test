@@ -13,10 +13,5 @@ jobs:
           (New-Object System.Net.WebClient).DownloadFile('https://files.openscad.org/OpenSCAD-2021.01-x86-32-Installer.exe', 'OpenSCAD-2021.01-x86-32-Installer.exe')
           .\OpenSCAD-2021.01-x86-32-Installer.exe
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: 3.8
-
-      - name: Find OpenSCAD
-        run: python -c 'from shutil import which; import os; print(which("C:\Program Files\OpenSCAD\openscad.exe")))'
+     - name: find openscad
+       run: dir
