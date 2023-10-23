@@ -10,8 +10,8 @@ jobs:
       - name: Download and Install OpenSCAD
         shell: pwsh
         run: |
-          (New-Object System.Net.WebClient).DownloadFile('https://files.openscad.org/OpenSCAD-2021.01-x86-32-Installer.exe', 'OpenSCAD-2021.01-x86-32-Installer.exe')
-          .\OpenSCAD-2021.01-x86-32-Installer.exe
+          (New-Object System.Net.WebClient).DownloadFile('https://files.openscad.org/OpenSCAD-2021.01-x86-64-Installer.exe', 'OpenSCAD-Installer.exe')
+          .\OpenSCAD--Installer.exe
 
       - name: Set up Python
         uses: actions/setup-python@v4
